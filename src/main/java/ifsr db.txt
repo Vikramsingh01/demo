@@ -1,0 +1,61 @@
+
+~~~~ check inbound o/p xml~~~ 
+  
+ssh -p9500 megan@10.60.2.123 	
+ssh -p9500 megan@10.60.2.223
+MegaNexus2015
+  cd /home/megan/shard/apache-servicemix-6.0.0/data/spg-audit/dist-stubs/logCRCStubOutbound   
+  cd /home/megan/shard/apache-servicemix-6.0.0/data/spg-audit/dist-stubs/logCRCStubInbound
+   open 22 and than go to
+tail -500f /var/neotr/services-logs/rollback-framework-service-logger.log
+
+  
+ ~~~~~ ifsr db login ~~~
+HostName: 83.151.209.178
+PORT: 465
+ssh -p 9500 megan@10.60.3.171
+Username: ifsr_developer
+Password:MegaDev2017 
+step_1 : sudo mysql                                   
+Step_3: use neo_45_tr
+
+
+
+
+ select * from neo_audit_log where table_id=38 order by audit_log_id desc limit 10\G;
+
+
+~~~~~~~logs~~~~~~~~~~
+                   Check Inbound log
+ssh -p9500 megan@10.60.2.22
+exit
+MegaNexus2015
+cd /var/neotr/services-logs
+tail -f outbound-service-logger.log
+tail -f inbound-service-logger.log
+
+ ~~~~logs on ifsr~~
+ls
+
+tail -f /var/neotr/services-logs/rollback-framework-service-logger.log
+
+~~~~~audit table querry in ifsr~~~~
+select * from neo_audit_log order by created_date limit 1\G;
+ 
+ 
+ `````````stub for put xmls on cms``````````````````
+Inbound xml  (192.168.2.27)
+cd /opt/softwares/apache-servicemix-6.0.0/data/spg-audit/dist-stubs/logCRCStubInbound
+ 
+Outbound Xml (192.168.2.27)
+cd /opt/softwares/apache-servicemix-6.0.0/data/spg-audit/dist-stubs/logCRCStubOutbound
+ 
+Shard Logs 
+cd /opt/softwares/apache-servicemix-6.0.0/logs/
+tail  -f shard.log
+ 
+ 
+ ~~~~~~~~~~to watch last update in xml~~~~~~~~~~~
+ watch -n 1 "ls -rt | tail -1 | xargs cat"
+ 
+ java -jar selenium-server-standalone-2.53.1.jar -Dwebdriver.gecko.driver="geckodriver-v0.19.0"

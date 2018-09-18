@@ -4,14 +4,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
+import org.testng.annotations.*;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 
 public class Datatesting {
 
-	@org.testng.annotations.Test(dataProvider = "mytestingdata")
+	@Test(dataProvider = "mytestingdata")
 	private void Test(HashMap mapdata) {
 		System.out.println("***********************TEST STARTED***************************");
 		//System.out.println(mapdata.get("ID"));

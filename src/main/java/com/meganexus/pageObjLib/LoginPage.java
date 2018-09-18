@@ -8,8 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 import com.meganexus.GenericLib.ReadProperties;
 import com.meganexus.GenericLib.TestBase;
-import com.meganexus.selenium.reporting.ExtentReport;
-import com.relevantcodes.extentreports.LogStatus;
 
 public class LoginPage extends TestBase {
 
@@ -28,10 +26,10 @@ public class LoginPage extends TestBase {
 
 	public void Startup() {
 		String browser = ReadProperties.getInstance().getProperty("browserType");
-		ExtentReport.test = ExtentReport.report.startTest("Overall Report");
+
 		open_Browser(browser);
 		driver.manage().window().maximize();
-		ExtentReport.test.log(LogStatus.INFO, "Browser started");
+
 		String URL = ReadProperties.getInstance().getProperty("testsiteBaseURL");
 		TestBase.enter_URL(URL);
 		try {
@@ -43,6 +41,7 @@ public class LoginPage extends TestBase {
 
 	public void entercredentials() throws InterruptedException {
 		try {
+			PageFactory.initElements(TestBase.driver, LoginPage.class);
 			String userName = ReadProperties.getInstance().getProperty("username");
 			String passWord = ReadProperties.getInstance().getProperty("password");
 			tbx_username.sendKeys(userName);

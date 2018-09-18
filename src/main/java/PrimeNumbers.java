@@ -7,7 +7,12 @@ class PrimeNumbers
        int num =0;
        //Empty String
        String  primeNumbers = "";
-
+      /* Scanner scan= new Scanner(System.in);
+   	System.out.println("Enter any number:");
+   	//capture the input in an integer
+   	int num=scan.nextInt();
+           scan.close();*/
+       
        for (i = 1; i <= 100; i++)         
        { 		  	  
           int counter=0; 	  

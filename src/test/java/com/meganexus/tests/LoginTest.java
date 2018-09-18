@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 
 import com.meganexus.GenericLib.TestBase;
 import com.meganexus.pageObjLib.LoginPage;
-import com.relevantcodes.extentreports.LogStatus;
 
 /*@Listeners(AutomationReporting.class)*/
 @Listeners(ScreenShots.class)
@@ -27,17 +26,14 @@ public class LoginTest {
 	@Test(priority = 0, description = "NEO-TR Title verifying, enabled = true")
 	public void verfyLoginPageTitleTest() throws Exception {
 		lp=PageFactory.initElements(TestBase.driver, LoginPage.class);
+		lp.entercredentials();
 		String expected = "My Service Users";
 		String actual = lp.getTitle();
 		Assert.assertEquals(actual, expected, "title not matched");
 		if (actual.equals(
 				expected)) {
-			ExtentReport.test.log(LogStatus.PASS, "verify Title of the page");
 		} else {
-			ExtentReport.test.log(LogStatus.FAIL, "verify Title of the page");
 		}
-		ExtentReport.report.endTest(ExtentReport.test);
-		ExtentReport.report.flush();
 	}
 	
 
