@@ -34,23 +34,24 @@ public class DatePicker {
         
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         
-        //button to open calendar
-        driver.findElement(By.xpath("//a[text()='Accept Cookies']")).click();
+        driver.findElement(By.xpath("//a[@class='optanon-allow-all']")).click();
         
-        WebElement selectDate = driver.findElement(By.xpath("//span[@aria-controls='datetimepicker_dateview']"));
+        //button to open calendar
+        driver.findElement(By.xpath("//span[@aria-controls='datetimepicker_dateview']")).click();
+        
+       /* WebElement selectDate = driver.findElement(By.xpath("//span[@aria-controls='datetimepicker_dateview']"));
         Thread.sleep(2000);
-    selectDate.click();
+    selectDate.click();*/
 
     //button to move next in calendar
     WebElement nextLink = driver.findElement(By.xpath("//div[@id='datetimepicker_dateview']//div[@class='k-header']//a[contains(@class,'k-nav-next')]"));
     WebElement midLink = driver.findElement(By.xpath("//div[@id='datetimepicker_dateview']//div[@class='k-header']//a[contains(@class,'k-nav-fast')]"));
     WebElement previousLink = driver.findElement(By.xpath("//div[@id='datetimepicker_dateview']//div[@class='k-header']//a[contains(@class,'k-nav-prev')]")); 
-        //Split the date time to get only the date part
 
+    //Split the date time to get only the date part
         String date_dd_MM_yyyy[] = (dateTime.split(" ")[0]).split("/");
 
         //get the year difference between current year and year to set in calander
-
         int yearDiff = Integer.parseInt(date_dd_MM_yyyy[2])- Calendar.getInstance().get(Calendar.YEAR);
 
         midLink.click();

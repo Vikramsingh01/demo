@@ -1,40 +1,46 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map.Entry;
-import java.util.Set;
- 
-public class HashMapExampleThree 
-{    
-    public static void main(String[] args) 
-    {
-        //Creating HashMap with default initial capacity and load factor
-         
-        HashMap<String, Integer> map = new HashMap<String, Integer>();
-         
-        //Adding key-value pairs
-         
-        map.put("ONE", 1);
-         
-        map.put("TWO", 2);
-         
-        map.put("THREE", 3);
-         
-        map.put("FOUR", 4);
-         
-        //Adds key-value pair 'ONE-111' only if it is not present in map
-         
-        map.putIfAbsent("ONE", 111);
-         
-        //Adds key-value pair 'FIVE-5' only if it is not present in map
-         
-        map.putIfAbsent("FIVE", 5);
-         
-        //Printing key-value pairs of map
-         
-        Set<Entry<String, Integer>> entrySet = map.entrySet();
-                 
-        for (Entry<String, Integer> entry : entrySet) 
-        {
-            System.out.println(entry.getKey()+" : "+entry.getValue());
-        }        
-    }    
+
+public class HashMapExampleThree {
+	public static void main(String[] args) throws IOException {
+		HashMap<Integer, String> map = new HashMap<Integer, String>();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter the input count: ");
+		int valueCount = Integer.valueOf(br.readLine());
+		System.out.println("Enter the values: ");
+		for (int i = 0; i < valueCount; i++) {
+			String value = br.readLine();
+			map.put(i, value);
+		}
+
+		Iterator<Entry<Integer, String>> itr = map.entrySet().iterator();
+		System.out.println("Enter the key : ");
+		try {
+			int key = Integer.valueOf(br.readLine());
+
+			while (itr.hasNext()) {
+				Entry<Integer, String> entry = itr.next();
+				if (entry.getKey() == key) {
+					System.out.println("Here we go!!!     -> " + entry.getValue());
+				}
+			}
+		} catch (NumberFormatException e) {
+			System.out.println("You have entered a invalid key, Enter  a valid key");
+		}
+	}
+	/*
+	 * Set<Entry<String, Integer>> entryS = map.entrySet();
+	 * 
+	 * for (Entry<String, Integer> entry : entryS) {
+	 * System.out.println(entry.getKey()+" : "+entry.getValue()); }
+	 */
+	/*
+	 * for (Entry<String, Integer> entry : map.entrySet())
+	 * System.out.println("Key = " + entry.getKey() + ", Value = " +
+	 * entry.getValue());
+	 */
 }

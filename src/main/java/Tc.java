@@ -1,4 +1,3 @@
-// A Java program to demonstrate use of Comparable
 import java.io.*;
 import java.util.*;
  

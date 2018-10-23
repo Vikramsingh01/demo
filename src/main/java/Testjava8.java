@@ -19,7 +19,7 @@ public class Testjava8 {
 		phoneNumbers.put("Mary Lou", Arrays.asList("77323344", "938448333"));
 
 		Map<String, List<String>> filteredNumbers = phoneNumbers.entrySet().stream()
-				.filter(x -> x.getKey().contains("Mary")).collect(Collectors.toMap(p -> p.getKey(), p -> p.getValue()));
+				.filter(x -> x.getKey().contains("John Lawson")).collect(Collectors.toMap(p -> p.getKey(), p -> p.getValue()));
 		
 		filteredNumbers.forEach((key, value) -> {
 			System.out.println("Name: " + key + ": ");

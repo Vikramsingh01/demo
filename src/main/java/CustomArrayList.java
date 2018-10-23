@@ -35,7 +35,6 @@ class CustomArrayList {
 			// create an object and send values to the
 			// constructor to be saved in the Data class
 			list.add(new Data(roll[i], name[i], marks[i], phone[i]));
-			
 		}
 		printValues(list);
 	}
