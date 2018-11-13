@@ -12,7 +12,7 @@ import java.util.TreeSet;
 public class TomatoTest {
 	public static void main(String[] args) {
 
-		String str1 = "tomato";
+		String str1 = "todttso";
 		char[] chars = str1.toCharArray();
 
 		Map<Character, Integer> map = new HashMap<>();
@@ -27,7 +27,7 @@ public class TomatoTest {
 		}
 		for(char c : map.keySet()) {
             if(map.get(c) > 1) {
-                System.out.println(c);
+                System.out.println(map.get(c));
             }
         }
 		TreeMap<Character, Integer> tm = new TreeMap<>(map);

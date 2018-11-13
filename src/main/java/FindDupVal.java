@@ -45,18 +45,23 @@ public class FindDupVal {
 		WebElement dd_element = driver.findElement(By.id("selectid"));
 		Select select = new Select(dd_element);
 		List<WebElement> listofElements = select.getOptions();
-		Map<String, Long> wordCount = new HashMap<>();
-		
-		/*for (WebElement element : listofElements) {
+		Map<String, Integer> wordCount = new HashMap<>();
+
+		for (WebElement element : listofElements) {
 			if (wordCount.containsKey(element.getText())) {
 				wordCount.put(element.getText(), wordCount.get(element.getText()) + 1);
 			} else {
 				wordCount.put(element.getText(), 1);
 			}
 		}
-		System.out.println(wordCount);*/
-		
-		wordCount=listofElements.stream().map(x->x.getText()).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
-		System.out.println(wordCount.entrySet().stream().filter(x->x.getValue()>1).collect(Collectors.toList()));
+		//System.out.println(wordCount);
+		for(Entry<String, Integer> wc :wordCount.entrySet()){
+               if(wc.getValue()>1){
+            	   System.err.println(wc);
+               }
+		}
+
+		// wordCount=listofElements.stream().map(x->x.getText()).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		// System.out.println(wordCount.entrySet().stream().filter(x->x.getValue()>1).collect(Collectors.toList()));
 	}
 }
