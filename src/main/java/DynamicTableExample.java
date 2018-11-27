@@ -35,14 +35,13 @@ public class DynamicTableExample {
 			Number num = f.parse(max);
 			max = num.toString();
 			m = Double.parseDouble(max);
-			/*System.out.println(m);
 			
 			if (m > r) {
 				r = m;
-			}*/
-			list.add(num.doubleValue());
+			}
+			
 		}
 	
-		System.out.println("list : " + list);
+		System.out.println("maxi : " + r);
 	}
 }

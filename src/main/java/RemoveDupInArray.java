@@ -1,7 +1,7 @@
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class Lea {
+public class RemoveDupInArray {
 	static void removeDuplicates(int[] arrayWithDuplicates) {
 		System.out.println("Array With Duplicates : ");
 
@@ -14,7 +14,6 @@ public class Lea {
 		for (int i = 0; i < arrayWithDuplicates.length; i++) {
 			set.add(arrayWithDuplicates[i]);
 		}
-
 		// Converting set into an array
 
 		Object[] arrayWithoutDuplicates = set.toArray();

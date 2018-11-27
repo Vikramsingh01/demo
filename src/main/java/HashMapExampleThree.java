@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Map.Entry;
 
 public class HashMapExampleThree {
@@ -23,7 +24,7 @@ public class HashMapExampleThree {
 			int key = Integer.valueOf(br.readLine());
 
 			while (itr.hasNext()) {
-				Entry<Integer, String> entry = itr.next();
+				Map.Entry<Integer, String> entry = itr.next();
 				if (entry.getKey() == key) {
 					System.out.println("Here we go!!!     -> " + entry.getValue());
 				}

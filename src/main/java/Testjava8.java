@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 interface Math {
@@ -13,6 +15,11 @@ public class Testjava8 {
 
 	public static void main(String[] args) {
 
+		List<String> list = new ArrayList(Arrays.asList("a", "b", "f", "b", "d", "e", "b", "c", "f", "f"));
+		
+		Map<String, Long> map = list.stream().sorted().collect(Collectors.groupingBy(Function.identity(),Collectors.counting())); 
+		System.out.println(map);
+		
 		Map<String, List<String>> phoneNumbers = new HashMap<String, List<String>>();
 		phoneNumbers.put("John Lawson", Arrays.asList("3232312323", "8933555472"));
 		phoneNumbers.put("Mary Jane", Arrays.asList("12323344", "492648333"));

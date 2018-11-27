@@ -31,7 +31,7 @@ public class TomatoTest {
             }
         }
 		TreeMap<Character, Integer> tm = new TreeMap<>(map);
-System.out.println(tm);
+
 		List<Holder> list = new ArrayList<>();
 
 		for (Entry<Character, Integer> ent : tm.entrySet()) {

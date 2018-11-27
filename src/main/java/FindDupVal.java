@@ -57,7 +57,7 @@ public class FindDupVal {
 		//System.out.println(wordCount);
 		for(Entry<String, Integer> wc :wordCount.entrySet()){
                if(wc.getValue()>1){
-            	   System.err.println(wc);
+            	   System.out.println(wc);
                }
 		}
 
