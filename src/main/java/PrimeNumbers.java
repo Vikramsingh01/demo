@@ -13,7 +13,7 @@ class PrimeNumbers
    	int num=scan.nextInt();
            scan.close();*/
        
-       for (i = 1; i <= 100; i++)         
+       for (i = 1; i <= 10; i++)         
        { 		  	  
           int counter=0; 	  
           for(num =i; num>=1; num--)

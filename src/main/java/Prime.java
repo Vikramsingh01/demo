@@ -23,8 +23,5 @@ class Prime {
 	   System.out.println(num + " is a Prime Number");
 	else
 	   System.out.println(num + " is not a Prime Number");
-   */
-	   boolean b=2%2==0;
-	System.out.println("abc"+ b);   
    }
 }

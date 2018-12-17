@@ -8,7 +8,7 @@ import java.util.Map.Entry;
 
 public class HashMapExampleThree {
 	public static void main(String[] args) throws IOException {
-		HashMap<Integer, String> map = new HashMap<Integer, String>();
+		Map<Integer, String> map = new HashMap<Integer, String>();
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter the input count: ");
 		int valueCount = Integer.valueOf(br.readLine());

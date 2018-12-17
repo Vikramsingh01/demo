@@ -8,7 +8,7 @@ public class ReverseStrin {
 
 		for (int i = in.length - 1; i >= 0; i--) {
 			result = result + o.charAt(i);
-			
+
 		}
 		System.out.println(result);
 	}
