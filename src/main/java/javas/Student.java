@@ -1,4 +1,4 @@
-package javatest;
+package javas;
 
 import java.io.*; 
 import java.util.*; 
