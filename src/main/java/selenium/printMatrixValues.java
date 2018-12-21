@@ -1,4 +1,4 @@
-package JavaConcepts;
+package selenium;
 
 public class printMatrixValues {
 	public static void printMatrix(int[][] matrix) {

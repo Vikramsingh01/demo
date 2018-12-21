@@ -4,7 +4,7 @@ class ReverseString
 {
    public static void main(String args[])
    {
-      String original ="Hellobhai";
+      String original ="Hellojava";
       String reverse = "";
      
       

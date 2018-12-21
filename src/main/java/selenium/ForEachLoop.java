@@ -1,4 +1,4 @@
-package JavaConcepts;
+package selenium;
 public class ForEachLoop
 {
     public static void main(String[] args)

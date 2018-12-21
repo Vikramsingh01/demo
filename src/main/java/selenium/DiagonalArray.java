@@ -7,7 +7,7 @@ public class DiagonalArray {
 		int k = 0, j = 0;
 		int sum1 = 0, sum2 = 0;
 		for (j = 0; j < d.length; j++) {
-			for (k = 0; k < d.length; k++)
+			for (k = 0; k < d[j].length; k++)
 				System.out.print(d[j][k] + " ");
 			System.out.println();
 		}

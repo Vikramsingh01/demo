@@ -26,7 +26,7 @@ public class DataProviderTest {
 		System.out.println(mapdata.get("ADDRESS"));
 		System.out.println("***************************TEST END***************************");
 	}
-	
+	/*
 	@DataProvider(name = "mytestingdata")
 	public Iterator<Object[]> createData() {
 		String filepath = "TestData//TRIAL.xlsx";	
@@ -52,9 +52,9 @@ public class DataProviderTest {
 		
 	  return new Iterator(obj);
 	}
+*/
 
-
-/*	@DataProvider(name = "mytestingdata",parallel=true)
+	@DataProvider(name = "mytestingdata",parallel=true)
 	public Object[][] dataProviderMethod() throws IOException {
 		String filepath = "TestData//TRIAL.xlsx";	
 		File file = new File(filepath);
@@ -79,6 +79,6 @@ public class DataProviderTest {
 		return obj;
 		
 
-	}*/
+	}
 
 }

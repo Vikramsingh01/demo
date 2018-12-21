@@ -1,4 +1,4 @@
-package JavaConcepts;
+package selenium;
 
 public class T {
 
