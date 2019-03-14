@@ -1,3 +1,5 @@
+package selenium;
+
 import java.util.Arrays;  
    
 public class AnagramString {  

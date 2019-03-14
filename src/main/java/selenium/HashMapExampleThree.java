@@ -1,3 +1,5 @@
+package selenium;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,7 +10,7 @@ import java.util.Map.Entry;
 
 public class HashMapExampleThree {
 	public static void main(String[] args) throws IOException {
-		Map<Integer, String> map = new HashMap<Integer, String>();
+		Map<Integer, String> map = new HashMap<>();
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter the input count: ");
 		int valueCount = Integer.valueOf(br.readLine());
@@ -24,7 +26,7 @@ public class HashMapExampleThree {
 			int key = Integer.valueOf(br.readLine());
 
 			while (itr.hasNext()) {
-				Map.Entry<Integer, String> entry = itr.next();
+				Entry<Integer, String> entry = itr.next();
 				if (entry.getKey() == key) {
 					System.out.println("Here we go!!!     -> " + entry.getValue());
 				}

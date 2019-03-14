@@ -1,4 +1,4 @@
-
+package selenium;
 public class TriangleStar {
 	public static void main(String[] args) {
 
@@ -11,11 +11,11 @@ public class TriangleStar {
 		int k = n;
 		for (int i = 0; i < n; i++) {
 			num = 1;
-			for (int j = 0; j < k; j++) {
-				System.out.print(" ");
+			for (int j = 1; j < k; j++) {
+				System.out.print("-");
 			}
 			k = k - 1;
-			for (int j = 0; j <= i; j++) {
+			for (int h = 0; h <= i; h++) {
 				System.out.print(num + " ");
 				num++;
 			}
